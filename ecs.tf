@@ -24,7 +24,7 @@ resource "aws_ecs_capacity_provider" "test" {
 resource "aws_ecs_task_definition" "task-definition-test" {
   family                = "web-family"
   container_definitions = file("container-definitions/container-def.json")
-  network_mode = "bridge"
+  network_mode          = "bridge"
   tags = {
     "env"       = "dev"
     "createdBy" = "mkerimova"
@@ -56,7 +56,7 @@ resource "aws_ecs_service" "service" {
 resource "aws_cloudwatch_log_group" "log_group" {
   name = "/ecs/frontend-container"
   tags = {
-    "env" = "dev"
+    "env"       = "dev"
     "createdBy" = "mkerimova"
   }
 }
