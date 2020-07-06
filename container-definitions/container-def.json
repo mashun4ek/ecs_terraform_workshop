@@ -1,0 +1,21 @@
+[
+    {
+      "name": "pink-slon",
+      "image": "334600146392.dkr.ecr.us-east-1.amazonaws.com/workshop:latest",
+      "cpu": 10,
+      "memory": 256,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 80
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": { 
+          "awslogs-group" : "/ecs/frontend-container",
+          "awslogs-region": "us-east-1"
+        }
+      }
+    }
+]
