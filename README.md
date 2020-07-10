@@ -20,6 +20,8 @@ Note: it can take about 5 minutes to provision all resources.
 1. Terminate instances
 2. Run `terraform destroy`
 
+## Brief Description
+
 Cluster is created using container instances (EC2 launch type, not Fargate!). 
 
 In this example, verified module `vpc` is imported from Terraform Registry, other resources are created in relevant files.
